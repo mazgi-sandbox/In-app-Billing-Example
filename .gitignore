@@ -1,0 +1,5 @@
+build/
+.gradle/
+workspace.xml
+tasks.xml
+*.iws
