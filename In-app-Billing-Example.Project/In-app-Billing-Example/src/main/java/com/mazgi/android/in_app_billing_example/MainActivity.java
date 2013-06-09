@@ -1,5 +1,7 @@
 package com.mazgi.android.in_app_billing_example;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -25,19 +27,26 @@ public class MainActivity extends Activity {
         productTypesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item);
 
         //TODO: temporarily hard-coding
-        productTypesAdapter.add("product 01");
-        productTypesAdapter.add("product 02");
-        productTypesAdapter.add("product 03");
+        productTypesAdapter.add("Start");
+
+//        Intent intent = new Intent(this, ProductTypeListActivity.class);
+//        startActivity(intent);
 
         // get views
         listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(productTypesAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            Context context;
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //TODO:
+                Intent intent = new Intent(context, ProductTypeListActivity.class);
+                startActivity(intent);
             }
-        });
+            public AdapterView.OnItemClickListener setContext(Context context) {
+                this.context = context;
+                return this;
+            }
+        }.setContext(this));
     }
 
     @Override
