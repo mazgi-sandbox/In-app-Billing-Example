@@ -20,4 +20,10 @@ android {
         minSdkVersion 7
         targetSdkVersion 16
     }
+
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
 }
