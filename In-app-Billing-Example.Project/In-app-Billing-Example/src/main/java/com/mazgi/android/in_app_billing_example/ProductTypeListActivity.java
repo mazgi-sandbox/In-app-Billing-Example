@@ -27,9 +27,9 @@ public class ProductTypeListActivity extends Activity {
         productTypesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item);
 
         //TODO: temporarily hard-coding
-        productTypesAdapter.add("product type 01");
-        productTypesAdapter.add("product type 02");
-        productTypesAdapter.add("product type 03");
+        productTypesAdapter.add("Non-consumable");
+        productTypesAdapter.add("Consumable");
+        productTypesAdapter.add("Subscription");
 
         // get views
         listView = (ListView)findViewById(R.id.productTypeListView);

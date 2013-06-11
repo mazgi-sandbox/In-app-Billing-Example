@@ -39,7 +39,10 @@ public class ProductListActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ArrayAdapter<String> adapter = (ArrayAdapter<String>)adapterView.getAdapter();
+                String productId = adapter.getItem(i);
                 Intent intent = new Intent(context, ProductDetailActivity.class);
+                intent.putExtra("PRODUCT_ID", productId);
                 startActivity(intent);
             }
 
