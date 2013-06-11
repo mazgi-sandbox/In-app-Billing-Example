@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductTypeListActivity"/>
+        <activity android:name=".ProductListActivity"/>
+        <activity android:name=".ProductDetailActivity"/>
     </application>
 
 </manifest>
