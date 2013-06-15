@@ -15,7 +15,7 @@ import com.mazgi.android.in_app_billing_example.util.Purchase;
 /**
  * Created by matsuki_hidenori on 6/11/13.
  */
-public class ProductDetailActivity extends Activity {
+public class ProductDetailActivity extends Activity implements IABDispatcherDelegate {
 
     Button buyButton;
     IabHelper iabHelper;
